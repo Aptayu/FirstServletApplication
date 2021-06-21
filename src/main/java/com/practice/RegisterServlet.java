@@ -30,9 +30,21 @@ public class RegisterServlet  extends HttpServlet{
 			out.println("<h1>Course: " + course + "</h1>");
 			
 //			If you want to save JDBC 
+			
+//			saved successfully
+			
+			RequestDispatcher rd = request.getRequestDispatcher("success");
+//			As you were forwarding this you'll see the response from final servlet
+			rd.forward(request, response);
 		}
-		else
+		else {
 			out.println("<h1>Please accept T & C</h1>");
+//		I want to include output of index.html
+		
+			RequestDispatcher rd = request.getRequestDispatcher("index.html");
+		
+			rd.include(request, response);
+		}
 	}
 	
 	
