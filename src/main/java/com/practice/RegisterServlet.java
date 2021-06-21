@@ -29,9 +29,9 @@ public class RegisterServlet  extends HttpServlet{
 			out.println("<h1>Gender: " + gender + "</h1>");
 			out.println("<h1>Course: " + course + "</h1>");
 			
-//			If you want to save JDBC 
+//			If you want to save use JDBC 
 			
-//			saved successfully
+//			assuming saved successfully
 			
 			RequestDispatcher rd = request.getRequestDispatcher("success");
 //			As you were forwarding this you'll see the response from final servlet
